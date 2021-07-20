@@ -55,12 +55,12 @@ public class hashmap
 				System.out.println(temp);
 				break;
 			case 2:System.out.println("Enter the Word:");
-			MyMapNode=removeWord(MyMapNode);
-			break;
+			        MyMapNode=removeWord(MyMapNode);
+			        break;
 			case 3:System.exit(0);
-			break;
+			        break;
 			default:System.out.println("Entered Wrong value");
-			break;
+		               	break;
 			}
 		}
 	}

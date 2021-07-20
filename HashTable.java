@@ -44,7 +44,7 @@ public class hashmap
 		while(true)
 		{
 			int choice;
-			System.out.println("1.Find Frequency of Word\n2.Remove an Element\n3.Exit");
+			System.out.println("1.Find Frequency of Word\n2.Exit");
 			choice=sc.nextInt();
 			int temp;
 			switch(choice)
@@ -54,13 +54,10 @@ public class hashmap
 				temp=findValue(MyMapNode);
 				System.out.println(temp);
 				break;
-			case 2:System.out.println("Enter the Word:");
-			MyMapNode=removeWord(MyMapNode);
-			break;
-			case 3:System.exit(0);
-			break;
+			case 2:System.exit(0);
+			    break;
 			default:System.out.println("Entered Wrong value");
-			break;
+			    break;
 			}
 		}
 	}
@@ -86,18 +83,6 @@ public class hashmap
 		int temp=hashCode(word);
 		Node x=MyMapNode.get(temp);
 		return x.value;
-
-	}
-
-	public static HashMap<Integer, Node> removeWord(HashMap<Integer, Node> MyMapNode)
-	{
-
-		@SuppressWarnings("resource")
-		Scanner sc=new Scanner(System.in);
-		String word=sc.nextLine();
-		int temp=hashCode(word);
-		MyMapNode.remove(temp);
-		return MyMapNode;
 
 	}
 }
